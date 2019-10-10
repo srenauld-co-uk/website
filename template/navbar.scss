@@ -1,0 +1,178 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    }
+
+.nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 3em;
+    background: #171f2f;
+    border-bottom: 1px solid #232833;
+    padding: 0;
+    margin: 0;
+    .nav-content {
+        position: relative;
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        > .logo {
+            
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+            padding: 0 2em 0 2em;
+            display: inline-block;
+            height: 2.7em;
+            top: 0.3em;
+            width: auto;
+            position: relative;
+            > img {
+                height: 100%;
+            }
+        }
+    }
+}
+.menu-button-container {
+    position: absolute;
+    top: 0.3em;
+    left: 0.5em;
+    button {
+        -webkit-border-top-right-radius: 5px;
+        -webkit-border-bottom-right-radius: 5px;
+        -moz-border-radius-topright: 5px;
+        -moz-border-radius-bottomright: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        -webkit-border-top-left-radius: 5px;
+        -webkit-border-bottom-left-radius: 5px;
+        -moz-border-radius-topleft: 5px;
+        -moz-border-radius-bottomleft: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: none;
+        background: #232833;
+        height: 2.7em;
+        width: 2.7em;
+        color: #4f5b66;
+        font-size: 10pt;
+        -webkit-transition: all .55s ease;
+        -moz-transition: all .55s ease;
+        -ms-transition: all .55s ease;
+        -o-transition: all .55s ease;
+        transition: all .55s ease;
+        // margin-left: -2.7em;
+        position: absolute;
+        opacity: 1;
+        &:hover {
+            background: white;
+        }
+    }
+}
+.content-wrap {
+    height: auto !important;
+    position: absolute;
+    width: 100%;
+    top: 69px;
+    bottom: 0;
+}
+.nav-link-container {
+    display: none;
+}
+.nav-link-container {
+    > ul, > ul > li {
+        -webkit-transition: all .55s ease;
+        -moz-transition: all .55s ease;
+        -ms-transition: all .55s ease;
+        -o-transition: all .55s ease;
+        transition: all .55s ease;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .nav-content > .logo {
+        position: absolute;
+        display: block;
+        left: 50%;
+        width: auto;
+        transform: translateX(-50%);
+    }
+    .nav-link-bg {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 100%;
+        width: 100%;
+        background: #000;
+        opacity: 0.4;
+        backdrop-filter: blur(5px);
+    }
+    .nav-link-container {
+        display: block;
+        position: fixed;
+        width: 80%;
+        top: 0;
+        left: -100%;
+        z-index: 10;
+        height: 100%;
+        background: #171f2f;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        &.nav-link-container-open {
+            left: 0 !important;
+        }
+    }
+}
+@media only screen and (min-width: 576px) {
+    .nav-link-container {
+        display: block;
+        float: left;
+        min-width: 3em;
+        line-height: 3em;
+        > ul, > ul > li {
+            float: left;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            line-height: 3em;
+        }
+        > ul > li {
+            padding: 0 0.5em 0 0.5em;
+            > a {
+                color: #94A3AB;
+                text-decoration: none;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .app, .site-container, .site-background {
+        min-height: 100vh;
+      }
+    .home-link {
+      position: relative;
+      float: left;
+      top: auto;
+      left: auto;
+      transform: none;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .nav-link-container {
+        > ul > li {
+            padding: 0 1em 0 1em;
+        }
+    }
+}
+@import './search_box.scss';

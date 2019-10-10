@@ -1,0 +1,117 @@
+.search-box {
+    position: absolute;
+    top: 0.3em;
+    right: 0.5em;
+  }
+  .search-box input {
+    width: 0px;
+    height: 2.7em;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #fff;
+    padding-left: 15px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+  }
+  .search-box .search-box-open {
+    width: 300px;
+  }
+  .search-box .suggestions {
+    position: absolute;
+    z-index: 5;
+    margin: 0;
+    top: 50px;
+    padding: 0;
+    left: 0;
+    margin-right: 55px;
+    width: 316px;
+    background: #171f2f;
+    list-style: none;
+    max-height: 0px;
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+    overflow: hidden;
+  }
+  .search-box .suggestions.visible {
+    max-height: 500px;
+  }
+  .search-box button {
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    background: #232833;
+    height: 2.7em;
+    width: 2.7em;
+    color: #4f5b66;
+    font-size: 10pt;
+    -webkit-transition: all .55s ease;
+    -moz-transition: all .55s ease;
+    -ms-transition: all .55s ease;
+    -o-transition: all .55s ease;
+    transition: all .55s ease;
+    margin-left: -2.7em;
+    position: absolute;
+    opacity: 1;
+  }
+  .search-box button:hover {
+   background: white;
+  }
+
+  @media only screen and (min-width: 768px) {
+      .search-box button {
+          
+    -webkit-border-top-left-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius-topleft: 0px;
+    -moz-border-radius-bottomleft: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+      }
+    .search-box input {
+      width: 300px;
+    }
+    .nav-dropdown {
+      background: #232833;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      position: relative;
+      margin-left: 0px;
+      padding: 0;
+      top: 8px;
+      border: 1px black solid;
+      left: 0px;
+      z-index: 3;
+    }
+    .nav-dropdown > .dropdown-item {
+      margin: 0;
+      line-height: 30px;
+      padding: 0px;
+      min-width: 200px;
+    }
+    .nav-dropdown > .dropdown-item > a {
+      display: block;
+      padding: 3px 8px;
+      line-height: 30px;
+    }
+  }
